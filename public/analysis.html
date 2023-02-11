@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer Review Analysis In Accordance With Product Analysis</title>
+<meta name="generator" content="Org Mode">
+
+      <link rel="stylesheet" href="./analysis_files/simple.min.css">
+      <link id="sakura-css" rel="stylesheet" href="./analysis_files/sakura.css">
+	<script>
+       var themes = [
+    {
+      name: "Sakura (default)",
+      href: "css/sakura.css",
+    },
+    {
+      name: "sakura-earthly",
+      href: "css/sakura-earthly.css",
+    },
+    {
+      name: "sakura-vader",
+      href: "css/sakura-vader.css",
+    },
+    {
+      name: "sakura-dark",
+      href: "css/sakura-dark.css"
+    },
+  ];
+  var current = 0;
+  var sakura = document.getElementById("sakura-css");
+  sakura.disabled = false;
+  function toggleSakura() {
+    if (sakura.disabled === true) {
+      sakura.disabled = false
+      switchTag.style.display = 'block';
+    } else {
+      sakura.disabled = true
+      switchTag.style.display = 'none';
+    }
+  }
+
+  var switchTag = document.getElementById("switch");
+  var currentThemeTag = document.getElementById("currentTheme");
+  function switchSakuraTheme() {
+    sakura.href = themes[(current + 1)% themes.length].href;
+    current += 1
+  }
+  </script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Customer Review Analysis In Accordance With Product Analysis</h1>
+
+<div id="outline-container-orgee69934" class="outline-2">
+<h2 id="orgee69934">Literature Review</h2>
+<div class="outline-text-2" id="text-orgee69934">
+</div>
+<div id="outline-container-org120b33d" class="outline-3">
+<h3 id="org120b33d">Introduction</h3>
+<div class="outline-text-3" id="text-org120b33d">
+<p>
+In recent years, we have  seen immense growth in e-commerce, the
+products which were sold in retail businesses in the past decade
+have  started  appearing  in   the  inventories  of  big  online
+e-commerce  platforms.  Hence  data around  products  and  their
+review in raw form of text has enlarged and the technology which
+analyzes  this  large  amount  of text  is  also  evolving.  For
+example, Customer reviews  which once were not  available to the
+hospitality operators has been  a deciding factor in formulation
+of business processes (Lui et.  al, 2015). A segment of research
+is leaning toward how users  perceive the review content that is
+available on the internet. As  an example, a recent survey taken
+in 2021 suggests that 54% of  the user review content is trusted
+by the  respondents in the  US and with  a high number  in Great
+Britain (2).  However, the amount  of data that is  available on
+the  internet  and  e-commerce  websites is  a  huge  amount  of
+unstructured data either in terms  of customer reviews or social
+media content  and it is the  most challenging task in  big data
+analytics to extract information from unstructured text (Gandomi
+&amp; Haider, 2015).
+</p>
+
+<p>
+To understand  the customer  satisfaction and to  further extend
+that  to improve  business process  and product  design process,
+customer   review  analysis   can  be   exploited  as   a  vital
+factor.  Previously,  Kano's  model   (Kano,  1984)  provided  a
+framework  comprising five  quality  attributes  to explain  the
+process  of customer  satisfaction. This  has been  exploited in
+various  studies to  extract features  from textual  reviews and
+have  been  improved  upon  to better  understand  the  customer
+expectation from the product and hence the product features.
+</p>
+
+<p>
+In this paper, we will  analyze available literature on customer
+review  analysis in  respect with  product analyses.  Throughout
+this paper we will touch upon  major ideas as well as approaches
+used to mine  customer textual reviews and  social media content
+with  various  semantic analysis  techniques  as  well as  other
+machine learning algorithms.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75ce5ec" class="outline-3">
+<h3 id="org75ce5ec">Major Themes</h3>
+<div class="outline-text-3" id="text-org75ce5ec">
+<p>
+The literature review revealed major themes regarding meaning in
+the   textual   reviews   and  their   interpretation   by   the
+reader. Various  studies used historical knowledge  on sentiment
+analysis and understanding of customer psychology.
+</p>
+
+<p>
+The  literature  reviewed  in  this study  showed  major  themes
+related to :
+</p>
+
+<ol class="org-ol">
+<li>Kano model for customer satisfaction</li>
+<li>Polarity in customer reviews</li>
+<li>Helpfulness of Review</li>
+<li>Review Quality Classification</li>
+<li>Domain Knowledge</li>
+<li>Rating Framework</li>
+<li>Product Lifecycle</li>
+<li>Preference of Risk</li>
+</ol>
+</div>
+
+<div id="outline-container-org8412d3c" class="outline-4">
+<h4 id="org8412d3c">Kano's model for customer satisfaction</h4>
+<div class="outline-text-4" id="text-org8412d3c">
+<p>
+The  studies on  product analysis  and customer  review analysis
+used semantic  analysis to  mine the unstructured  text, however
+most  of  these  studies  were dependent  on  Kano's  model  for
+customer satisfaction  (Kano, 1984)  and its five  categories of
+quality  attribute. One  such study  weighed on  five steps  for
+extracting the customer satisfaction  for hotels in Korea, which
+used frequency analysis and semantic analysis and then used Kano
+classification  to  derive  the attributes  that  can  represent
+Customer  Satisfaction Model(Lee  et.  al,  2022). Another  such
+study which  applied Kano's  model for customer  satisfaction on
+bicycles found  that the  lifecycle of the  product is  a potent
+factor to  consider when identifying the  attributes from Kano's
+model and  weighed on further  study(Lin et. al,  2017). Another
+study concluded  that deriving Kano's model  categories from the
+importance  of   product  or  service  was   more  effective  to
+understand customer satisfaction for  Huawei P series phones.(Wu
+et. al, 2018)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4392851" class="outline-4">
+<h4 id="org4392851">Polarity in customer reviews</h4>
+<div class="outline-text-4" id="text-org4392851">
+<p>
+Customer reviews for a product  or service contains positive and
+negative sentiments, and this  polarity in customer opinions for
+a single  product is  a major factor  to consider  when applying
+semantic analysis on customer reviews. This polarity in customer
+reviews   was   most   effectively   presented   in   study   of
+discriminative attributes  in the  reviews of  cosmetic products
+(Kim &amp; Kang, 2018). Most of  the studies which mined the text to
+arrive at what  customer wants from a  product included polarity
+based attribute  classification. In one such  study, the authors
+explored electronic word of  mouth(eWOM) for e-commerce products
+using automatic fuzzy product ontology weighed on computation of
+polarity for  more accurate results  of eWOM(Sun et.  al( 2019),
+Turney  &amp; Litmman  (2003)) describe  the classification  of text
+into  praise  and  criticism   using  semantic  orientation  and
+semantic  association.   Similarly,  in  another  study  authors
+explain how  the polarity in  customer reviews can be  viewed in
+perspective of its helpfulness.  (Ahmad &amp; Laroche, 2015)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga186655" class="outline-4">
+<h4 id="orga186655">Helpfulness of review</h4>
+<div class="outline-text-4" id="text-orga186655">
+<p>
+Analysis  of customer  reviews  only presents  one  part of  the
+puzzle  as it  looks at  the customer  reviews subjectively  and
+fails to provide understanding of the impact of these reviews on
+readers,  hence  fails to  provide  forecasting  of the  product
+sales(Lohan  et.    al,  2011).  There  have   been  studies  to
+understand the impact  of the reviews on the  readers. Ahmad and
+Laroche  (2015)   proposed  a  hypothesis  based   on  Cognitive
+Appraisal Theory suggesting that  helpfulness of review is based
+on  the  certainty  sentiment   in  the  customer  review.  They
+concluded that the more the  certainty sentiment in the customer
+review, the more  is to direct the reader  towards acceptance of
+the  product.   In  another  study,  analyzing   the  impact  of
+electronic  word  of  mouth(eWOM) from  social  media  platforms
+suggest that eWOM  has a major role in  reduction of uncertainty
+about  the  product  and  hence affects  purchase  decisions  of
+customers(Hajli et.  al, 2014)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec99204" class="outline-4">
+<h4 id="orgec99204">Review of quality classification</h4>
+<div class="outline-text-4" id="text-orgec99204">
+<p>
+Similar  to helpfulness  of the  reviews, another  approach that
+could be  used to classify the  reviews based on the  quality of
+the reviews. By measuring the quality of the review, it provides
+a  framework to  remove  them  based on  their  quality. Such  a
+similar  approach can  be seen  in  the study,  the reviews  are
+classified  based  on  the opinion  strength  visualization  and
+ranked based on their quality  and removing low quality customer
+reviews(Shamin  et. al,  2021).  They used  product features  to
+develop a ranking method to evaluate customer reviews.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e24760" class="outline-4">
+<h4 id="org7e24760">Domain Knowledge</h4>
+<div class="outline-text-4" id="text-org7e24760">
+<p>
+Most  of the  time customer  reviews  are vague  and contain  no
+information about the  product, if such reviews  are credible or
+not is still a question.  However, helpfulness of the review can
+be  determined  from domain  knowledge  in  the customer  review
+itself.  In one  such study  where  the authors  try to  improve
+SA(semantic   analysis)   technique   using   Domain   Sensitive
+Features(DSF), emphasizes on use of domain knowledge to evaluate
+the  bag of  words(Rintyarna et.al,  2019).  Similarly,  authors
+have  used   labeled  data  to  supervise   the  exploration  of
+electronic word  of mouth(eWOM) in customer  reviews(Sun et. al,
+2019).  Domain knowledge  is  a very  important  aspect in  such
+studies where social content is evaluated for its interpretation
+as  it  improves  certainty  in  readers'  minds  approving  the
+certainty  hypothesis  proposed  by Ahmed  and  Laroche(Ahmad  &amp;
+Laroche, 2015).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04a1ae6" class="outline-4">
+<h4 id="org04a1ae6">Rating Framework</h4>
+<div class="outline-text-4" id="text-org04a1ae6">
+<p>
+Today  many  online  reviewing systems  provide  a  differential
+rating that tells users to rate  the product or service based on
+each attribute.  These multidimensional rating frameworks can be
+useful to provide more  informative ratings(Chen et.  al, 2018).
+Peng and  Cui provides  an approach  to understand  the customer
+satisfaction  for  hotels(service)   and  beer(product)  through
+correlation between different ratings  and sentiments in textual
+reviews(Peng et.  al, 2019).  In  one such study, where the main
+focus was  product rating,  authors reviewed  various components
+other than textual review and was more product related affecting
+the rating of the product(Sánchez-Pérez et. al, 2021)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org376e5f2" class="outline-4">
+<h4 id="org376e5f2">Product Lifecycle</h4>
+<div class="outline-text-4" id="text-org376e5f2">
+<p>
+Customer reviews on  products can vary over  time throughout the
+lifecycle  of the  product. It  can  be an  important aspect  to
+understand  the differentiation  of expectation  between service
+and products(Ahmad &amp;  Laroche, 2015). A time  series analysis in
+combination  with   the  I-Kano  matrix  algorithm   can  assist
+analyzing change in  customer review attribute over  a period of
+time(Lee et. al, 2022). Lin  and Tsai also suggest more research
+towards the impact of product  lifecycle on customer reviews and
+ratings(Lin et. al, 2017)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9668ce" class="outline-4">
+<h4 id="orge9668ce">Preference of risk</h4>
+<div class="outline-text-4" id="text-orge9668ce">
+<p>
+Kano's model  on customer  satisfaction suggests that  there are
+three basic principles of loss  and gain(Lin et. al, 2017) which
+are very  critical to  understand the customer's  preference for
+risk  taking.These principles  explain  the customer's  attitude
+towards loss and gain regarding  the product features, which can
+be  used to  interpret the  customer  review in  respect to  the
+reader and forecast the impact on product sale.
+</p>
+
+<p>
+There are  other approaches to  study the product  analysis that
+have been touched  upon in this literature  review, however they
+are  important in  respect  of  product launch  as  well as  the
+marketing associated  with it.  In study  analyzing twitter data
+in respect to the launch of Apple and Samsung products, proposes
+a social network analysis  focusing on the conversation analysis
+to understand the electronic word of mouth(eWOM)(Lipizzi et. al,
+2015). As  noted in one  study (Albayrak &amp; Caber,  2013) product
+performance  and customer  satisfaction  has  an asymmetric  and
+non-linear  relationship and  can  be a  potential aspect  while
+evaluating performance  of the product based  on online customer
+reviews(OCR). Reviews  are classified based on  the structure of
+the  content  in three  different  categories:  short, long  and
+unstructured (Haddara et. al, 2020).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org87c9eba" class="outline-3">
+<h3 id="org87c9eba">Analysis Approaches Used</h3>
+<div class="outline-text-3" id="text-org87c9eba">
+<p>
+Product  analysis  based  on  customer review  analysis  can  be
+divided into  two different steps: mining  the unstructured text
+to either  produce a bag of  words or extract sentiments  of the
+customer reviews. And  then use the output of the  first step to
+evaluate  the  review  using  different  analytics  and  machine
+learning techniques to produce results that can be understood.
+</p>
+
+<p>
+Most  of  the studies  done  in  the  past on  customer  reviews
+analysis  have used  Latent  Semantic  Analysis(LSA) and  Latent
+Dirichlet Allocation(LDA).   For example, Kim and  Kang used LSA
+and  LDA  to  extract discriminative  attributes  from  cosmetic
+products(Kim &amp; Kang, 2018).  Similarly, in a study of the impact
+of social media  on electronic word of  mouth(eWOM), the authors
+used Singular Value Decomposition(SVD)  algorithm in addition to
+LSA to extract SVD  factors from the twitter conversations(Ahmad
+&amp; Laroche,  2015). While  in study  by Xu  and Wang  uses Linear
+Regression Model to work upon features computed from the textual
+reviews by LSA(Xu et. al, 2017).
+</p>
+
+<p>
+In some studies  of customer review analysis,  authors have used
+more fine grained  steps that ranged from three to  five to come
+to the end result.  Lee, Park and Kwak proposed five steps which
+included  two steps  of  Kano classification  and I-Kano  matrix
+analysis to extract kano attributes from textual reviews(Lee et.
+al, 2022).  Ban &amp; Kim  (2019) analyzed airlines customer reviews
+data by  introducing Machine Learning framework  to evaluate the
+features extracted from Frequency  analysis and Semantic Network
+Analysis.  In one study of  Amazon product reviews, authors used
+supervised  Machine  Learning   algorithm  with  labeled  domain
+knowledge after semantic analysis  to ingest credibility aspects
+of customer reviews into the text mining(Rintyarna et.al, 2019).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b1d529" class="outline-3">
+<h3 id="org9b1d529">Findings</h3>
+<div class="outline-text-3" id="text-org9b1d529">
+<p>
+Finding  meaning  in  the  unstructured  textual  reviews  is  a
+challenging task and various aspects like Kano Model (Lee et. al
+, 2022, Wu  et. al, 2018) polarity in customer  reviews (Ahmad &amp;
+Laroche,  2015), Kano  model (Hajli  et. al  , 2014)  Quality of
+reviews  (Shamin  et. al,  2021)  has  been  used to  provide  a
+direction for understanding the meaning in textual reviews. Some
+exploration  in social  conversations(Hajli et.   al, 2014)  and
+social  media  content(Sun et.   al,  2019)  proposed models  to
+understand the impact of social media trends and conversation to
+determine the sales of the product after its initial launch.
+</p>
+
+<p>
+However, semantic analysis is a  major technique that is used in
+customer  review analysis  as  well as  various other  important
+aspects affecting the product analysis, various other techniques
+(as shown in Rintyarna et.al  2019)are placed on top to evaluate
+the process behind customer  review analysis and product feature
+analysis.
+</p>
+
+<p>
+The previous work in the  analysis of customer reviews and other
+aspects of the product  analysis reported few problems regarding
+chronological nature of  customer reviews and its  impact to the
+product lifecycle as major problems to incorporate with semantic
+analysis.(Lin  et.   al, 2017)  Shimi  Naurin  Ahmad and  Michel
+Laroche advocates  future research on comparison  of service and
+product reviews  and how  intangible aspects of  service affects
+the content of the reviews (Ahmad &amp; Laroche, 2015)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org991859c" class="outline-3">
+<h3 id="org991859c">Gaps in Literature</h3>
+<div class="outline-text-3" id="text-org991859c">
+<p>
+Throughout this section, we will  discuss the literature gap and
+possible direction of further study to understand the product or
+service in  accordance with customer satisfaction.  We will also
+touch upon  various aspects  of customer satisfaction  which are
+more related  to organizations business processes  regarding the
+development  of   certain  products.  Below  are   the  research
+questions that's needed to  study to understand the relationship
+between    customer   reviews,    customer   satisfaction    and
+product/service sale.
+</p>
+
+<ol class="org-ol">
+<li>Does the  intangible nature of service affect  the content of
+the  customer  reviews  resulting in  positive  and  negative
+sentiments?</li>
+
+<li>How the  lifecycle of  the product  can affect  the customer
+reviews and satisfaction based on  it's timespan or launch of
+new product?</li>
+<li>Can  a digital campaign  on social media affect  the customer
+reviews positively or negatively?</li>
+<li>Can a  service which  is  supportive to  a product  increase
+customer  satisfaction  beyond  its  correlation  to  product
+performance?</li>
+</ol>
+</div>
+
+<div id="outline-container-org9f71cf1" class="outline-4">
+<h4 id="org9f71cf1">Difference between reviews of product and service</h4>
+<div class="outline-text-4" id="text-org9f71cf1">
+<p>
+As suggested in a study by  Ahmed and Laroche, there needs to be
+further  study in  the  area of  difference  between reviews  of
+product  and   service(Ahmad  &amp;   Laroche,  2015).    There  are
+possibilities of  difference in customer satisfaction  towards a
+product   and  service   due   to  the   intangible  nature   of
+service. Furthermore,  customer reviews  on service needs  to be
+supported by  the evidence of transcripts  between customers and
+service  support  systems.   Similar  to the  impact  of  social
+electronic word of mouth on reduction of certainty(Hajli et. al,
+2014),  the impact  of transcripts  can be  evaluated to  better
+understand the  customer satisfaction of  service. Additionally,
+customer opinions  for services  tend to  be more  detailed when
+classified  as negative,  however  it needs  to  be verified  to
+understand the difference of  opinion mining between product and
+service.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee66bd6" class="outline-4">
+<h4 id="orgee66bd6">Customer satisfaction through the life cycle of the product</h4>
+<div class="outline-text-4" id="text-orgee66bd6">
+<p>
+Product life  cycle can vary from  days to years, for  example a
+food  product is  consumed on  daily  or weekly  basis while  an
+automobile product can survive up  to decade.  To understand the
+customer satisfaction this  very aspect of the  product needs to
+be incorporated in the framework of customer review analysis. We
+can see  such evidence(Lee et.   al, 2022), where  I-Kano Matric
+can be  used to incorporate additional  variables like longevity
+of the product.   Products which are having  shorter life cycles
+can incorporate direct  performance-importance(Wu et.  al, 2018)
+models to improve customer  satisfaction.  Similar kind of study
+needs to  be done  having a  longer life  cycle, to  improve the
+product  design processes  that can  take continuous  evaluation
+from customer review mining.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fe9688" class="outline-4">
+<h4 id="org3fe9688">Correlation between digital marketing and its reflection in customer reviews.</h4>
+<div class="outline-text-4" id="text-org3fe9688">
+<p>
+There  is  indeed an  impact  of  social  media content  on  the
+interpretation  of   customer  reviews   as  it   can  propagate
+electronic word  of mouth  which can be  critical to  remove the
+uncertainty in readers mind.(Hajli  et. al, 2014) However, there
+is a possibility of similar  negative kind of propagation in the
+social media content either by rival company or some loyalist of
+the company, that  has nothing to do with  the product features.
+There is evidence that just  as customer behavior reinforces the
+market, the market also can reinforce the customer behavior(Wood
+&amp; Burchell, 2018).  How this  kind of negative - electronic word
+of mouth impacts the mind of the reader while reviewing customer
+reviews.  Such  study needs to  address also the  possibility of
+similar negative  reviews that have  nothing to do  with product
+features or performance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org555921f" class="outline-4">
+<h4 id="org555921f">Analysis of reviews of service related to product</h4>
+<div class="outline-text-4" id="text-org555921f">
+<p>
+Most of the studies have  either touched upon the service sector
+as in hotel services ((Lee et. al (2022) and Ban &amp; Kim ,2018) or
+product sector  as in  cosmetic products(Haddara et.   al, 2020)
+and  amazon product(–)  as focus  of customer  satisfaction and
+opinion   mining.    However,   to   understand   the   customer
+satisfaction through customer relation, we need to further study
+on products and services that are interrelated, and how customer
+satisfaction and customer reviews of these services and products
+correlates to  each other.   There needs to  be research  in the
+area  of  customer and  service  support  transcripts to  better
+understand the  credibility of  the customer reviews  and direct
+the product and service based decision with more accuracy.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d880fc" class="outline-3">
+<h3 id="org3d880fc">Real life application</h3>
+<div class="outline-text-3" id="text-org3d880fc">
+<p>
+Customer satisfaction  and customer review analysis  can be seen
+as a  bilateral process to  improve the  product as well  as the
+business  processes  developing  the products(Wood  &amp;  Burchell,
+2018). Customer satisfaction and customer review analysis can be
+an automated  process through which an  organization can improve
+customer relations and  listen to the preferences  and peeves of
+customers to  design better  products and  services.  Sentiments
+found in the trends of social media are not enough to understand
+a customer's  needs(Lipizzi et.  al,  2015) and in the  new era,
+where there is a realm of  products which needs to be customized
+as per customer  segments needs further development  in the area
+of  customer  preference and  satisfaction  in  addition to  the
+trends in social media.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org951c43d" class="outline-3">
+<h3 id="org951c43d">Implications</h3>
+<div class="outline-text-3" id="text-org951c43d">
+</div>
+<div id="outline-container-org6905af5" class="outline-4">
+<h4 id="org6905af5">Practical Implications</h4>
+<div class="outline-text-4" id="text-org6905af5">
+<p>
+This study shows how different  aspects of customer reviews have
+been  used to  analyze the  product or  service as  well as  the
+perspective of the end user of the product or service. Evolution
+in  the  business  process  previously has  been  based  on  the
+empirical  evidence  of how  a  product/service  should be  best
+designed. Development  of new  products and  services is  a very
+important  process  for  an  organization  in  this  competitive
+age(Golder &amp; Mitra, 2018). However, disposal of huge data around
+the perception of end users about products and services provided
+by  an organization  or company  is the  most vital  aspect when
+designing business processes that are suited to deliver the best
+products objectively and not subjectively. Hence, development of
+new product as well as service
+</p>
+
+<p>
+In  today's market,  competition for  a single  product needs  a
+customer  first  perspective  at  the  implementation  phase  of
+product design.  Customer perspective  can be best understood by
+different  techniques  shown  in   this  study.   The  practical
+application  of  effective  product  analysis  can  improve  the
+already  known business  process and  product design  process as
+well as infer an higher level of product delivery framework that
+can encourage involvement of customers more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org987799f" class="outline-4">
+<h4 id="org987799f">Theoretical Implications</h4>
+<div class="outline-text-4" id="text-org987799f">
+<p>
+In theory,  the product analysis  based on customer  reviews can
+also  help understand  the  trends of  emotions running  through
+different customer segments and it  can provide us an additional
+perspective to  understand the semantics of  language in regards
+to customers segmentation based on their loyalty to organization
+or to any entity.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b7f76c" class="outline-3">
+<h3 id="org5b7f76c">Conclusion and Future Research</h3>
+<div class="outline-text-3" id="text-org5b7f76c">
+<p>
+This study involved  review of literature of the  past decade on
+customer  reviews   and  product  analysis  based   on  customer
+satisfaction.   The  literature   used  various   techniques  of
+sentiment analysis, latent semantic  analysis as well as machine
+learning algorithm  to find meaning  in the textual  reviews and
+social media content about certain  products in order to provide
+better customer satisfaction and product design process. Current
+research  has been  based  on various  psychological models  for
+customer  satisfaction   like  the  Kano  model   and  emotional
+hypothesis on  interpretation of customer reviews.  The research
+has provided understanding of impact of customer review analysis
+on customer satisfaction and product design processes.
+</p>
+
+<p>
+In this  literature review,  There is limitation  as it  has not
+involved business processes that  are attached to product design
+and its analysis.  To execute  both product design processes and
+product analysis  in coherence the product  design processes are
+further needed to study within  the iota of product analysis. As
+discussed above there  is scope for research  in accordance with
+comparison  of  product  and  service  review  analysis  and  it
+requires  thorough   analysis  to   understand  the   impact  of
+intangible  nature  of  the  services on  customer  reviews  and
+electronic  word of  mouth(eWOM).  To understand  the impact  of
+customer  reviews on  product sales  there needs  to be  further
+research  where customer  reviews on  two different  versions of
+product  and similar  product from  two different  companies are
+analyzed and  mined for  customer satisfaction  evaluation. This
+literature  review  is  limited  in the  sense  of  analysis  of
+literature available  on customer review analysis  in accordance
+with product  analysis as  it only  reviews literature  from the
+past decade.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org494d3b5" class="outline-3">
+<h3 id="org494d3b5">Conflict of Interest</h3>
+<div class="outline-text-3" id="text-org494d3b5">
+<p>
+The authors  declared that there  are no potential  conflicts of
+interests regarding the paper.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8c5226" class="outline-3">
+<h3 id="orgc8c5226">References</h3>
+<div class="outline-text-3" id="text-orgc8c5226">
+<ol class="org-ol">
+<li>Lui, T. W., Bartosiak, M.,  Piccoli, G., &amp; Sadhya, V. (2018).
+Online   review  response   strategy  and   its  effects   on
+competitive performance. Tourism Management, 67, 180-190.</li>
+<li><a href="https://www-statista-com.proxy1.lib.trentu.ca/statistics/1243212/us-uk-trust-review-websites/">US and UK Review Websites</a></li>
+<li>Gandomi, A.,  &amp; Haider, M. (2015). Beyond the  hype: Big data
+concepts,  methods, and  analytics. International  journal of
+information management, 35(2), 137-144.</li>
+<li>Kano,   N.   (1984).   Attractive   quality   and   must-be
+quality. Hinshitsu (Quality, The  Journal of Japanese Society
+for Quality Control), 14, 39-48.</li>
+<li>Lee,  S., Park,  S., &amp;  Kwak, M.  (2022). Revealing  the dual
+importance  and  Kano  type of  attributes  through  customer
+review  analytics.  Advanced   Engineering  Informatics,  51,
+<ol class="org-ol">
+<li></li>
+</ol></li>
+<li>Lin, F. H., Tsai, S. B.,  Lee, Y. C., Hsiao, C. F., Zhou, J.,
+Wang, J.,  &amp; Shang, Z.  (2017). Empirical research  on Kano's
+model and customer satisfaction. PloS one, 12(9), e0183888.</li>
+<li>Wu, J., Wang, Y., Zhang, R., &amp; Cai, J. (2018). An approach to
+discovering  product/service  improvement  priorities:  Using
+dynamic   importance-performance  analysis.   Sustainability,
+10(10), 3564.</li>
+<li>Kim, S.  G., &amp; Kang, J. (2018).  Analyzing the discriminative
+attributes of products using  text mining focused on cosmetic
+reviews.   Information   Processing  &amp;   Management,   54(6),
+938-957.</li>
+<li>Sun, Q.,  Niu, J., Yao, Z., &amp; Yan,  H. (2019). Exploring eWOM
+in  online   customer  reviews:   Sentiment  analysis   at  a
+fine-grained  level. Engineering  Applications of  Artificial
+Intelligence, 81, 68-78.</li>
+<li>Ahmad, S.   N., &amp;  Laroche, M.   (2015).  How  do expressed
+emotions  affect  the  helpfulness   of  a  product  review?
+Evidence  from  reviews   using  latent  semantic  analysis.
+International   Journal  of   Electronic  Commerce,   20(1),
+76-111.</li>
+<li>Ahmad,  S. N., &amp;  Laroche, M. (2017).   Analyzing electronic
+word of  mouth: A  social commerce  construct. International
+Journal of Information Management, 37(3), 202-213.</li>
+<li>Hajli,   N.,   Lin,    X.,   Featherman,   M.,   &amp;   Wang,
+Y. (2014). Social  word of mouth: How trust  develops in the
+market.   International Journal  of Market  Research, 56(5),
+673-689.</li>
+<li>Turney,  P. D., &amp;  Littman, M. L. (2003).   Measuring praise
+and  criticism:  Inference   of  semantic  orientation  from
+association. ACM Transactions on Information Systems (TOIS),
+21(4), 315-346.</li>
+<li>Shamim, A., Qureshi, M.   A., Jabeen, F., Liaqat, M., Bilal,
+M., Jembre,  Y.  Z., &amp; Attique,  M.  (2021). Multi-Attribute
+Online      Decision-Making      Driven      by      Opinion
+Mining. Mathematics, 9(8), 833.</li>
+<li>Lipizzi,  C., Iandoli,  L., &amp; Marquez,  J.  E.   R.  (2015).
+Extracting and evaluating  conversational patterns in social
+media: A socio-semantic analysis  of customers' reactions to
+the   launch  of   new  products   using  Twitter   streams.
+International  Journal  of  Information  Management,  35(4),
+490-503.</li>
+<li>Rintyarna,  B.  S.,  Sarno,  R.,  &amp; Fatichah,  C.   (2019).
+Evaluating the  performance of  sentence level  features and
+domain sensitive  features of product reviews  on supervised
+sentiment analysis tasks.  Journal of Big Data, 6(1), 1-19.</li>
+<li>Xu,  X., Wang, X., Li,  Y., &amp; Haghighi, M.  (2017). Business
+intelligence   in    online   customer    textual   reviews:
+Understanding    consumer   perceptions    and   influential
+factors.  International Journal  of information  management,
+37(6), 673-683.</li>
+<li>Ban, H.   J., &amp; Kim, H.  S.  (2019).  Understanding customer
+experience  and  satisfaction  through  airline  passengers'
+online review.  Sustainability, 11(15), 4066.</li>
+<li>Golder,  P.  N.,  &amp; Mitra, D.  (Eds.).  (2018).  Handbook of
+research   on  new   product   development.   Edward   Elgar
+Publishing.</li>
+<li>Lohan, G., Lang, M., &amp;  Conboy, K. (2011). Having a customer
+focus in agile software  development. In Information systems
+development (pp. 441-453). Springer, New York, NY.</li>
+<li>Peng, L., Cui, G., Chung, Y., &amp; Li, C. (2019). A multi-facet
+item   response   theory   approach  to   improve   customer
+satisfaction using  online product  ratings. Journal  of the
+Academy of Marketing Science, 47(5), 960-976.</li>
+<li>Sánchez-Pérez,    M.,   Illescas-Manzano,   M.     D.,   &amp;
+Martínez-Puertas,  S.  (2021).   Online  review ratings:  an
+analysis    of    product   attributes    and    competitive
+environment. Journal of Marketing Communications, 1-19.</li>
+<li>Albayrak,  T., &amp; Caber, M.  (2013). Penalty–Reward-Contrast
+Analysis:   a  review   of  its   application  in   customer
+satisfaction research.  Total Quality Management  &amp; Business
+Excellence, 24(11-12), 1288-1300.</li>
+<li>Haddara, M.,  Hsieh, J.,  Fagerstrøm, A.,  Eriksson, N.,  &amp;
+Sigurðsson, V. (2020). Exploring customer online reviews for
+new product development: The case of identifying reinforcers
+in the cosmetic industry. Managerial and Decision Economics,
+41(2), 250-273.</li>
+<li>Chen, P.  Y., Hong,  Y.,  &amp; Liu,  Y. (2018).  The value  of
+multidimensional  rating systems:  Evidence  from a  natural
+experiment and  randomized experiments.  Management Science,
+64(10), 4629-4647.</li>
+<li>Wood,  A.  J.,  &amp; Burchell, B.   J.  (2018).   The Cambridge
+Handbook of Psychology and Economic Behaviour.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+
+</body></html>
