@@ -69,7 +69,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "projects" */ '../views/Contact.vue'),
 		meta: {
-			title: 'anapp - Contato',
+			title: 'Contact',
 		},
 	},
 ];
