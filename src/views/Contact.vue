@@ -9,27 +9,6 @@ export default {
 		// ContactForm,
 		ContactDetails,
 	},
-	data: () => {
-		return {
-			contacts: [
-				{
-					id: 1,
-					name: 'Toronto-Ontario, Canada',
-					icon: 'map-pin',
-				},
-				{
-					id: 2,
-					name: 'dhavalpatel32768@gmail.com',
-					icon: 'mail',
-				},
-				{
-					id: 3,
-					name: '+1 647 861 1597',
-					icon: 'phone',
-				},
-			],
-		};
-	},
 	mounted() {
 		feather.replace();
 	},
@@ -45,9 +24,9 @@ export default {
 		class="container mx-auto flex flex-col-reverse md:flex-row py-5 md:py-10 md:mt-10"
 	>
 		<!-- Contact form -->
-		<ContactForm />
+		<!--<ContactForm /> -->
 
 		<!-- Contact details -->
-		<ContactDetails :contacts="contacts" />
+		<ContactDetails/>
 	</div>
 </template>

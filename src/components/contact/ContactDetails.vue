@@ -1,6 +1,6 @@
 <script>
 export default {
-	props: ['contacts'],
+	
 };
 </script>
 
@@ -13,23 +13,44 @@ export default {
 				Contact Details
 			</h2>
 			<ul class="font-general-regular">
-				<li class="flex" v-for="contact in contacts" :key="contact.id">
+				<li class="flex" :key="1">
 					<i
-						:data-feather="contact.icon"
+						data-feather="map-pin"
+						class="w-5 text-gray-500 dark:text-gray-400 mr-4"
+					></i>
+					<p
+						href="#"
+						class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
+						aria-label="Location"
+					>
+					Toronto-Ontario, Canada
+				</p>
+				</li>
+				<li class="flex" :key="1">
+					<i
+						data-feather="mail"
 						class="w-5 text-gray-500 dark:text-gray-400 mr-4"
 					></i>
 					<a
-						href="#"
+						href="mailto:dhavalpatel32768@gmail.com"
 						class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
-						:class="
-							contact.icon === 'mail' || contact.icon === 'phone'
-								? 'hover:underline cursor-pointer'
-								: ''
-						"
-						aria-label="Website and Phone"
+						aria-label="Mail"
 					>
-						{{ contact.name }}
-					</a>
+					dhavalpatel32768@gmail.com
+				</a>
+				</li>
+				<li class="flex" :key="1">
+					<i
+						data-feather="mail"
+						class="w-5 text-gray-500 dark:text-gray-400 mr-4"
+					></i>
+					<a
+						href="https://www.linkedin.com/in/dhavalpatel1729"
+						class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
+						aria-label="Mail"
+					>
+					LinkedIn
+				</a>
 				</li>
 			</ul>
 		</div>
