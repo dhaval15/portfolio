@@ -41,8 +41,8 @@ export default {
 			</subtitle>
 			<div class="flex justify-center sm:block">
 				<a
-					download="Stoman-Resume.pdf"
-					href="/files/dhaval-resume.pdf"
+					download="Dhaval-Resume.pdf"
+					href="/files/Dhaval-Resume.pdf"
 					class="flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-pink-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-pink-50 focus:ring-1 focus:ring-pink-900 hover:bg-pink-500 text-gray-500 hover:text-white duration-500"
 					aria-label="Download Resume"
 				>
