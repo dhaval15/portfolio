@@ -16,13 +16,11 @@ export default {
 			class="font-general-regular text-lg text-ternary-dark dark:text-ternary-light"
 		>
 			&copy; {{ copyrightDate }}
-			<a
-				href="https://portfolio.dhaval.cloud/aboutme"
-				target="__blank"
+			<span
 				class="font-general-medium hover:underline hover:text-pink-600 dark:hover:text-pink-300 duration-500"
 			>
 				{{ projectName }}
-			</a>
+	</span>
 			- developed by
 			<span
 				class="font-general-medium text-secondary-dark dark:text-secondary-light hover:underline hover:text-pink-600 dark:hover:text-pink-300 duration-500"
