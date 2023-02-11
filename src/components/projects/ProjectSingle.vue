@@ -7,6 +7,7 @@ export default {
 <template>
 	<a
 		:href="project.source"
+		style="background-color: #fffbfa"
 		class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
 		aria-label="Single Project"
 	>

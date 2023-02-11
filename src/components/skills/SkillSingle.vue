@@ -6,7 +6,7 @@ export default {
 
 <template>
     <div>
-		<div style="background-color: #99330022; border-radius: 50%; padding: 16%; aspect-ratio: 1; alignment:center">
+		<div style="background-color: #fff0eb; border-radius: 50%; padding: 28%; aspect-ratio: 1; alignment:center">
 			<img
 				:src="skill.icon"
 				:alt="skill.name"
