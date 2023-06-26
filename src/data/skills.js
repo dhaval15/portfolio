@@ -79,6 +79,11 @@ const skills = [
 	},
     {
 		id: 16,
+		name: 'ReactJs',
+		icon: require('@/assets/images/skills/reactjs.svg'),
+	},
+    {
+		id: 17,
 		name: 'VueJs',
 		icon: require('@/assets/images/skills/vuejs.svg'),
 	},
